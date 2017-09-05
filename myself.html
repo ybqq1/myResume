@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>我的简历</title>
+<link rel="stylesheet" href="http://cdn.dowebok.com/77/css/jquery.fullPage.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="http://csshake.surge.sh/csshake.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/js-image-slider.css">
+<style>
+.section1 { background: url(images/bg/bg1.jpg) 50%;background-size:cover;}
+.section2 { background: url(images/bg/bg2.png) 50%;background-size:cover;}
+.section3 { background: url(images/bg/bg3.jpg) 50%;background-size:cover}
+.section4 { background: url(images/bg/bg4.jpg) 50%;background-size:cover}
+.section5{ background: url(images/bg/bg5.jpg) 50%;background-size:cover}
+.section6{ background: url(images/bg/bg6.jpg) 50%;background-size:cover}
+.bumpy-char{line-height:3.4em;position:relative;}
+</style>
+<script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn.dowebok.com/77/js/jquery.fullPage.min.js"></script>
+<script src="js/js/easying.js"></script>
+<script src="js/js/jquery.bumpytext.packed.js"></script>
+<script src="js/js-image-slider.js"></script>
+
+
+<script>	
+$(function(){
+	$('#dowebok').fullpage({
+		anchors: ['page1', 'page2', 'page3', 'page4','page5','page6'],
+		menu: '#menu',
+		'navigation': true,
+		'loopBottom':true,
+		'resize':true,
+		'continuousHorizontal':true,
+		'navigationTooltips': ['首页', '基本资料', '专业技能', '工作经历', '项目经验', '自我评价'],
+		afterRender: function(){
+			move('.section1 span').set('margin-top','40px').scale(1.1).rotate(360).end();
+			move('.section1 p').set('margin-top','-360px').scale(1.2).end();
+			move('.section5 .s5').set('top','0px').end();
+		},
+		afterLoad: function(anchorLink,index){
+			switch(index){
+				case 1:
+					move('.section1 span').set('margin-top','40px').rotate(360).end() ;
+					move('.section1 p').set('margin-top','-360px').end();
+					break;
+				case 2:
+					move('.section2 h1').set('opacity','1').duration('0.5s').end();
+					move('.section2 .s2-1').set('opacity','1').duration('1s').end();	
+					move('.section2 .s2-2').set('margin-top','70px').rotate(720).delay(700).end();
+					move('.section2 .s2-3').set('margin-top','70px').delay(1600).end();
+					move('.section2 .s2-4').set('left','75%').delay(2300).end()
+					break;
+				case 3:
+					move('.section3 .p1').set('margin-top','5%').end();
+					move('.section3 .p2').set('opacity','1').set('margin-top','5%').duration('2s').delay(600).end();
+					move('.section3 .p3').set('margin-top','5%').delay(1500).end();
+					move('.section3 .p4').set('margin-top','5%').delay(2600).end();
+					move('.section3 .p5').set('margin-top','5%').delay(3600).end();
+					break;
+				case 4:
+					move('.section4 h2').scale(1.2).rotate(360).end();
+					move('.pic1 p').set('left','0px').end();
+					move('.pic2 p').set('top','0px').delay(400).end();
+					move('.pic3 p').set('left','0px').delay(800).end();
+					break;
+				case 5:
+					move('.section5 img').duration('1s').set('margin-top','200px').end();
+					
+					break;
+				default:
+					move('.section6 img').set('margin-top','0px').end();
+			
+				};
+			},
+		onLeave: function(anchorLink,index){
+			switch(index){
+				case 1:
+					move('.section1 span').set('margin-top','-360px').rotate(0).end();
+					move('.section1 p').set('margin-top','480px').end();
+					break;
+				case 2:
+					move('.section2 h1').set('opacity','0').end();
+					move('.section2 .s2-1').set('opacity','0').end();
+					move('.section2 .s2-2').set('margin-top','-600px').rotate(0).delay(0).end();
+					move('.section2 .s2-3').set('margin-top','-600px').delay(0).end();
+					move('.section2 .s2-4').set('left','200%').delay(0).end();
+					break;
+				case 3:
+					move('.section3 .p1').set('margin-top','-800px').delay(0).end();
+					move('.section3 .p2').set('opacity','0').set('margin-top','0').delay(0).end();
+					move('.section3 .p3').set('margin-top','-800px').delay(0).end();
+					move('.section3 .p4').set('margin-top','2000px').delay(0).end();
+					move('.section3 .p5').set('margin-top','2000px').delay(0).end();
+					
+					break;
+				case 4:
+					move('.section4 h2').scale(1).rotate(0).end();
+					move('.pic1 p').set('left','-450px').end();
+					move('.pic2 p').set('top','400px').delay(0).end();
+					move('.pic3 p').set('left','500px').delay(0).end();
+					break;
+				case 5:
+				move('.section5 img').set('margin-top','-200px').end();
+				break;
+				default:
+					move('.section6 img').set('margin-top','-9990px').end();
+			
+				};
+			}
+			
+	});
+});
+$(function(){
+	$('.text-flash').bumpyText();
+})
+
+
+</script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+</head>
+
+<body>
+
+<ul id="menu">
+	<li data-menuanchor="page1" class="active"><a href="#page1">HOME</a></li>
+	<li data-menuanchor="page2"><a href="#page2">基本信息</a></li>
+	<li data-menuanchor="page3"><a href="#page3">专业技能</a></li>
+	<li data-menuanchor="page4"><a href="#page4">工作经历</a></li>
+	<li data-menuanchor="page5"><a href="#page5">项目经验</a></li>
+	<li data-menuanchor="page6"><a href="#page6">自我评价</a></li>
+</ul>
+
+<div id="dowebok">
+	<div class="section section1">
+		<div class="s1">
+			<div class="photo shack">
+				<img style="cursor:pointer" onmousemove="this.src='images/page-1/flower2.png'"/ onmouseout="this.src='images/page-1/flower.jpg'"/ src="images/page-1/flower.jpg">
+			</div>
+			<span  >我不怕千万人阻挡，只怕自己投降！</span>
+			<hr>
+			<div class="content">
+				<p >杨 冰 倩</p>
+				<p>前 端 工 程 师</p>
+				<p>求职地点：武汉</p>
+				<p>联系方式：18271456862</p>
+			</div>
+		</div>
+		<div class="tab shake shake-vertical-slow shake-constant shake-constant--hover"onclick="window.location.href='#page2'"><font color="#C0D2FC"><p>please click me↙</p></font><img src="images/page-1/dian.png"></div>
+	</div>
+	<div class="section section2">
+		<div class="s2">
+			<h1 class="text-flash">个人基本资料</h1>
+			<div class="s2-1">
+				<div class="photo">
+					<img src="images/page-1/flower.jpg" style="width:80px;height:80px">
+				</div>
+				<h4>基本信息</h4>
+				<p>姓名：杨冰倩 女<br>
+				年龄：22岁 籍贯：安徽合肥</p>
+			</div>
+			<div class="s2-2">
+				<div class="photo">
+					<img src="images/page-2/hat.png" style="width:80px;height:80px">
+				</div>
+				<h4 >毕业院校</h4>
+				<p>武汉市江汉大学</p>
+			</div>
+			
+			<div class="s2-3">
+				<div class="photo">
+					<img src="images/page-2/book.png" style="width:80px;height:80px">
+				</div>
+				<h4>学历和专业</h4>
+				<p>本科 通信工程</p>	
+			</div>
+			<div class="s2-4">
+				<div class="photo">
+					<img src="images/page-2/photo1.jpg" style="width:50px;height:80px;border-radius:10px">
+				</div>
+				<h4>联系方式</h4>
+				<p>邮箱：1697376718@qq.com <br>电话：18271456862</p>
+			</div>
+		</div>
+	</div>
+		
+	<div class="section section3">
+		<div class="s3">
+			<div class="s3-pic"><img src="images/page-3/yanhua.png"></div>
+			<div class="s3-1">
+				<p class="p1">&nbsp; &nbsp; &nbsp; &nbsp;1.<span class=" shake shake-slow ">熟</span>练使用html, css, javascript, jquery,合理化完成web端的编写和维护,思路清晰,能处理主流浏览器的兼容问题。</p>
+				<p class="p2">&nbsp; &nbsp; &nbsp; &nbsp;2.熟悉animation,move.js,fullpage等实用插件的应用;轮播图,tab栏,导航菜单,全屏滚动等常用功能的实现,</p>
+				<p class="p3">&nbsp; &nbsp; &nbsp; &nbsp;3.熟悉W3C标准,对表现与数据分离、Web语义化等有较为深刻的理解。。</p>
+				<p class="p4">&nbsp; &nbsp; &nbsp; &nbsp;4.熟悉使用fireworks,能够迅速进行切图。</p>
+				<p class="p5">&nbsp; &nbsp; &nbsp; &nbsp;5.了解ajax,根据后台接口能够完成前后端交互。。</p>
+			</div>
+			<div class="s3-2">
+				<div class="subject">
+				<div class="subject-1 shake shake-opacity">HTML </div>
+				<div class="subject-2 shake shake-slow">css </div>
+				<div class="subject-3 shake shake-slow">css3</div>
+				<div class="subject-4  shake-horizontal shake-delay">jquery </div>
+				<div class="subject-5 shake-slow shake-constant shake-constant--hover">javascript </div>
+				<div class="subject-6 shake shake-slow">animation</div>
+				<div class="subject-7 shake shake-rotate">fireworks</div>
+				<div class="subject-8 shake shake-slow">ajax</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="section section4">
+		<div class="s4">
+			<h2 class="text-flash">个 人 经 历</h2>
+			<div class="pic1"><img src="images/page-4/jianghan.jpg" title="江汉大学">
+			<p  class="text-flash">武汉江汉大学物理与信息工程学院<br>
+			通信工程专业<br>
+			主修C语言，数据库，数电模电，信号系统，通信原理，单片机原理。</p>
+			</div>
+			<div class="pic2"><img src="images/page-4/study.jpg" title="study myself"><p>home and school<br>自学<br>学习前端相关技术,css html js jquery等等</p></div>
+			
+			<div class="pic3"><img src="images/page-4/company.jpg" title="欧乐科技"><p>杭州欧乐信息技术公司<br>前端实习<br>安全支付,安全通讯,互联网pos,移动终端</p></div>
+			
+		</div>
+	</div>
+	<div class="section section5">
+		<div class="s5">
+			<h1 class="title-5 text-flash">项 目 经 验</h1>
+			<div class="right">
+					<div id="sliderFrame">
+						<div id="slider">
+							<a href="https://github.com/ybqq1/guimeishopping" ><img src="images/page-5/1.jpg" alt="guimei mall(HTML+css+js+jquery)" title="study myself" /></a>
+							<a href="http://www.okline.cn/"><img src="images/page-5/2.jpg" alt="okline pos(HTML+css+js)"/></a>
+							<a href="https://github.com/ybqq1/personalBlog"><img src="images/page-5/3.png" alt="personal blog(HTML+css+js)" /></a>
+							
+						</div>
+						<div id="htmlcaption" style="display: none;">
+				<em>HTML</em> css+js+jquery.
+				</div>
+		</div>	
+		 
+	</div>	
+		</div>
+	</div>
+	<div class="section section6">
+		<div class="s6">
+			<div class="div1">
+				<img class="img img1 " src="images/page-6/thanks.jpg" >
+			</div>
+			<div class="picc"> <img src="images/page-6/kuang.png"></div>
+			<div class="start" title="">play</div>
+			<div class="stop">stop</div>
+			<div id="code"> <font color="black"><p class="say introduce">自我评价</p> 
+				<span class="say">尊敬的各位面试官您们好！</span><br>
+				<p class="say say1"> </p><p>下面由我来再次地介绍我自己：</p>
+				<p class="say">我叫杨冰倩，是一名本科院校毕业,通信工程专业的学生。</p>
+				<p class="say">性格活泼开朗，乐于助人。敲代码是我的乐趣，平时没事做喜欢琢磨，在大学期间也学习了前端相关的技术。</p>
+				<p class="say">我知道我目前是没有工作经验，但是我会用行动证明一切！希望贵公司能够接纳我!本人与您以最诚挚的谢意！谢谢！</p>
+				<p class="say space"> -- 杨冰倩的独白--</p> 
+			 </div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>
+<script src="js/move.js"></script>
+<script src="js/ziji.js"></script>
+<script>
+	$(function(){
+		$('.start').click(function(){
+			$('.picc img').css('opacity','1').animate({height:"620px"},1000,function(){
+			$("#code").show().typewriter();
+			});
+		});
+		$('.stop').click(function(){
+			$('.picc img').animate({height:"0"},1000,function(){
+			$("#code").fadeOut(300);
+			});
+		});
+	});
+
+</script>
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+*{padding:0;margin:0}
+#fp-nav ul li a.active span,.fp-slideNav ul li a.active span{background:#fff;box-shadow:-1px 0 5px #fff}
+#fp-nav ul li a span,.fp-slidesNav ul li a span{border:1px solid #fff} 
+.s2{width:600px;height:250px;margin:0 auto}
+#menu { margin: 0; padding: 0; position: fixed; left: 10px; top: 10px; list-style-type: none; z-index: 70;}
+#menu li { float: left; margin:  0 10px 0 0; font-size: 12px;}
+#menu li:hover{transform:translatey(5px);}
+#menu li:hover a{color:pink;font-size:14px}
+#menu a { float: left; padding: 5px 4px;  color: #fff; text-decoration: none;}
+#menu .active a { color: #fff; background-color: green;}
+.section { text-align: center;"YouYuan"; color: #fff;} 
+.s2{width:600px;height:250px;margin:0 auto}
+.s1{width:600px;height:500px;margin:0 auto;position:relative}
+.s1 span{position:absolute;margin:-360px auto;left:160px;font-size:18px}
+.s1 hr{position:relative;top:70px}
+.photo shack{position:absolute;width:80px;height:80px;margin-left:50%;margin-left:-40px}
+.s1 img{border-radius:100%;width:80px;height:80px;}
+.s1 .content{position:absolute;margin-top:480px;margin-left:200px;}
+.s1 p{padding-top:15px;margin-left:10px}
+.active .tab{width:150px;height:24px;position:absolute;line-height:44px;left:50%;margin-left:-75px;cursor:pointer;top:100%;margin-top:-200px;animation:myfirst 3s linear 2s infinite alternate;}
+@keyframes myfirst
+{
+0%   { left:50%; top:100%;}
+100%  { left:50%; top:90%;}
+}
+
+.s2{width:90%;height:450px;margin:-260px auto;position:relative;overflow:hidden;}
+.s2 .photo{width:80px;height:80px;margin:0 auto;cursor:pointer}
+.s2-1,.s2-2,.s2-3,.s2-4{position:absolute;width:260px;height:200px}
+.s2 p{font-size:14px;line-height:30px;}
+.s2-1{left:0%;margin-top:70px} .s2-1 img{border-radius:100%;}
+.s2-2{left:25%;margin-top:70px}
+.s2 h4{margin-top:20px}
+.s2-3{left:50%;margin-top:70px}
+.s2-4{left:75%;margin-top:70px}
+.s3{width:1400px;height:700px;margin:0 auto;position:relative;}
+.s3 .s3-pic{position:absolute;top:-20px;right:300px;animation:zanfang  12s infinite} }
+.s3 .s3-pic pic{width:100%;height:100%;position:absolute;display:block;top:0;left:0;}
+@keyframes zanfang{
+0%{transform: scale(1.1);} 
+50%{transform: scale(0.8); }
+100%{transform: scale(1.1);}
+}
+.s3-1{width:400px;height:500px;overflow:hidden;position:absolute;left:16%;top:20%}
+.s3-1 p{text-align:left;line-height:30px}
+.s3-2 {width:400px;height:500px;position:absolute;left:60%;top:16%}
+.active .s3-2 .subject{transform: scale(0.5);position:absolute;width:100%;height:100%;animation: bounceIn 2s linear forwards;}
+.subject-1{position:absolute;cursor:pointer;font-size: 40px;left:10%;top:5%;}
+.subject-2{position:absolute;cursor:pointer;font-size: 42px;left:70%; top:8%; }
+.subject-3{position:absolute;cursor:pointer;font-size:30px;left:20%; top:20%;}
+.subject-4{position:absolute;cursor:pointer;font-size: 40px;left:40%; top:40%;}
+.subject-5{position:absolute;cursor:pointer;font-size: 26px;left:50%; top:24%; }
+.subject-6{position:absolute;cursor:pointer;font-size: 20px;left:10%; top:60%; }
+.subject-7{position:absolute;cursor:pointer;font-size: 23px;left:24%; top:70%;}
+.subject-8{position:absolute;cursor:pointer;font-size: 34px;left:14%; top:40%;transform:rotate(-5deg)}
+.s4{width:1300px;height:500px;position:relative;margin:0 auto;overflow:hidden}
+.s4 .pic1, .s4 .pic2,.s4 .pic3{width:290px;height:290px;position:absolute;top:30%;top:35%}
+.s4 .pic2{left:35%} .s4 .pic3{left:70%}
+.s4 .pic1 p,.s4 .pic2 p,.s4 .pic3 p{font:14px/28px songti;position:relative;}
+.s4 .pic1 img,.s4 .pic2 img,.s4 .pic3 img{width:150px;height:150px;border-radius:100%;border:2px pink solid;cursor:pointer}
+.s4 .pic1 img:hover,.s4 .pic2 img:hover,.s4 .pic3 img:hover{transition:2s ease;transform:translatey(3px);border:1px solid pink}
+.s5{width:760px;height:540px;position:relative;margin:0 auto;overflow:hidden;}
+.s5 .right{width:760px;height:400px;position:absolute;top:110px;left:25px;}
+.s5 h1{font:28px/70px heiti;}
+.s6{width:100px;height:100px}
+#code{width:244px;position:absolute;top:25%;left:3.8%;text-align:left;display:none;}
+.s6 p{text-indent: 2em;line-height:30px}
+.active img{animation:imgmove 1s ease-in}.space{margin-left:75px}
+.picc{position:absolute;top:90px;left:0}.picc img{width:360px;height:0;position:absolute}
+.introduce{font-size:28px;position:absolute;top:-76px;margin-left:46px}
+.start,.stop{cursor:pointer;margin-left:400px;font-size:25px;padding-top:23px;position:absolute}
+.start{top:30%};.start{top:35%}
+.start:hover,.stop:hover{color:blue;transform:translatey(5px);font-size:30px}
+@keyframes imgmove{
+0%{transform:translatey(5px)}
+20%{transform:translatey(10px)}
+30%{transform:translatey(15px)}
+55%{transform:translatey(20px)}
+70%{transform:translatey(10px)}
+80%{transform:translatey(5px)}
+100%{transform:translatey(0px)}
+}
+.div1{position:absolute;width:100px;top:20%;left:80%;transform-origin: top left;animation:swinging 2s ease-in-out 0s infinite;}
+@-webkit-keyframes swinging{
+   0% { -webkit-transform: rotate(10deg); }
+   50% { -webkit-transform: rotate(-10deg); }
+   100% { -webkit-transform: rotate(10deg); }
+}
